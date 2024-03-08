@@ -1,0 +1,303 @@
+.blog-slider {
+  overflow: hidden;
+
+  .mdg-news-divider {
+    img {
+      width: 100% !important;
+    }
+  }
+
+  .mdg-news-divider-mobile {
+    display: none;
+  }
+
+  .swiper-container-horizontal {
+    margin-top: 2em;
+    margin-bottom: 30px !important;
+    padding-bottom: 1em;
+  }
+
+  .swiper-pagination {
+    margin-top: 2em;
+
+    .swiper-pagination-bullet {
+      width: 28px;
+      height: 28px;
+      border: 1px solid $color-primary;
+      background-color: $color-senary;
+      opacity: 1;
+      @include transform(scale(1));
+
+      &.swiper-pagination-bullet-active {
+        background: $color-white;
+
+        &::after {
+          content: '';
+          position: absolute;
+          margin: 0 auto;
+          top: 50%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: $color-secondary;
+          opacity: 1;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 8px;
+          height: 8px;
+          @include transform(translateY(-50%));
+        }
+      }
+    }
+  }
+
+  &_header {
+    padding: 4em 0 0 !important;
+
+    .et_pb_button_module_wrapper {
+      justify-content: flex-end;
+      display: flex;
+
+      @media (max-width: $tablet-large) {
+        justify-content: center;
+      }
+    }
+
+    &::before {
+      display: none;
+      height: 6px;
+
+      --border-width: 8px;
+      --stripe-distance: 2px;
+
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      top: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        $color-gray,
+        transparent 1px,
+        transparent var(--stripe-distance),
+        $color-gray calc(var(--stripe-distance) + 1px)
+      );
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: $color-primary;
+      font-size: $h3;
+      text-transform: uppercase;
+
+      @media (max-width: $tablet-large) {
+        font-size: $h3;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: $tablet-large) {
+      .et_pb_button {
+        font-size: $body-small;
+      }
+    }
+  }
+
+  .dsm_card_carousel_wrapper {
+    overflow: visible;
+  }
+
+  .blog-carousel {
+    .dsm-blog-carousel-item,
+    .dsm-post-carousel-item {
+      background-color: $color-quaternary;
+      color: $color-secondary;
+      overflow: hidden;
+
+      .dsm-entry-wrapper {
+        display: grid;
+        grid-template-rows: min-content min-content min-content 1fr;
+        grid-template-columns: 1fr;
+        padding: 0 0 4.5em;
+
+        .dsm-entry-header {
+          padding: 1.5em 1.5em 0;
+
+          h2 {
+            font-size: $body-small;
+            color: $color-primary;
+            grid-row: 2;
+            text-transform: uppercase;
+          }
+        }
+
+        .dsm-entry-meta {
+          padding: 1.5em 1.5em 0;
+          margin: 0;
+          grid-row: 1;
+
+          .dsm-meta-seperator {
+            display: none;
+          }
+
+          .dsm-posted-category {
+            background-color: $color-secondary;
+            font-size: $body-x-small;
+            padding: 0.5em 2em;
+            border-radius: 40px;
+            text-transform: uppercase;
+            color: $color-white;
+
+            @media (max-width: $tablet-large) {
+              padding: 0.25em 1em;
+            }
+
+            a {
+              color: $color-white;
+            }
+          }
+        }
+
+        .dsm-entry-content {
+          grid-row: 3;
+          padding: 0 1.5em 1.5em;
+
+          p {
+            /* autoprefixer: ignore next */
+            display: -webkit-box;
+            font-size: $body-small;
+            color: $color-secondary;
+            font-weight: 600;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+
+      .dsm-entry-thumbnail {
+        overflow: hidden;
+        position: relative;
+        margin: 0;
+        background-color: $color-quaternary;
+
+        img {
+          @include absolute-fill;
+
+          object-fit: cover;
+          object-position: center;
+          opacity: 1;
+          @include transition;
+        }
+      }
+
+      .dsm-readmore-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        a {
+          background-color: $color-primary;
+          padding: 1.5em 4em 1.5em 1.5em;
+          color: $color-white;
+          font-family: $font-secondary;
+          text-transform: uppercase;
+          font-size: $body-small;
+          width: 100%;
+
+          &::after {
+            position: absolute;
+            right: 1.5em;
+            top: 50%;
+            bottom: 0;
+            background-color: $color-white;
+            opacity: 1;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $font-awesome;
+            content: '\f061';
+            font-size: 1em;
+            color: $color-primary;
+            font-weight: 600;
+            height: 2em;
+            width: 2em;
+            @include transform(translateY(-50%));
+          }
+
+          @media (max-width: $tablet-large) {
+            font-size: $body-xx-small;
+
+            &::after {
+              height: 2.5em;
+              width: 2.5em;
+            }
+          }
+
+          &:hover {
+            background-color: #013563;
+
+            &::after {
+              background-color: #013563;
+              color: $color-white;
+              border: 1px solid $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-large) {
+  .blog-slider {
+    .mdg-news-divider {
+      display: none;
+    }
+
+    .mdg-news-divider-mobile {
+      display: block;
+    }
+
+    img {
+      width: 100% !important;
+    }
+  }
+
+  @media (min-width: $screen-xlarge) {
+    .blog-slider_header {
+      .et_pb_text_inner {
+        h2 {
+          font-size: $h2;
+        }
+      }
+    }
+
+    .blog-slider {
+      .blog-carousel {
+        .dsm-blog-carousel-item {
+          .dsm-entry-wrapper {
+            .dsm-entry-header h2 {
+              font-size: $body-standard;
+            }
+
+            .dsm-entry-content {
+              p {
+                font-size: $body-standard;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.testimonial-slider {
+  background-color: $color-primary;
+
+  .et_pb_row {
+    .dsm_card_carousel {
+      > .dsm_card_wrapper {
+        padding: 0 1.5em;
+      }
+
+      > .et_pb_module_inner {
+        width: 70% !important;
+        margin: 0 auto;
+
+        @media (max-width: $tablet-large) {
+          width: 100% !important;
+        }
+      }
+
+      .swiper-container {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  .dsm_card_carousel_child {
+    .dsm_card_wrapper {
+      padding: 0 1.5em;
+
+      @media (max-width: $tablet-large) {
+        padding: 0;
+      }
+    }
+  }
+
+  &_container {
+    article {
+      color: $color-white;
+      text-transform: uppercase;
+      position: relative;
+
+      @media (min-width: $tablet-x-large) {
+        padding-left: 5em;
+      }
+
+      .glyph-quote {
+        font-size: 4em;
+        color: $color-white;
+        font-weight: 600;
+        position: absolute;
+        top: -9px;
+        left: 0;
+
+        @media (max-width: $tablet-large) {
+          position: static;
+          margin-bottom: 0.25em;
+        }
+      }
+
+      .mdg-testimonial-card_text {
+        font-family: $font-secondary;
+        font-size: $body-large;
+
+        @media (max-width: $tablet-large) {
+          font-size: $h4;
+          line-height: 2;
+        }
+      }
+
+      .mdg-testimonial-card_person {
+        font-size: $body-standard;
+        font-family: $font-primary;
+        margin-top: 3em;
+
+        @media (max-width: $tablet-large) {
+          font-size: $body-standard;
+        }
+
+        .mdg-testimonial-card_person-name {
+          font-weight: 700;
+          display: block;
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      bottom: 0;
+      top: unset;
+      border-radius: 100%;
+      border: 2px solid $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.5em;
+      height: 2.5em;
+
+      @media (max-width: $tablet-large) {
+        position: static;
+        margin-top: 5em;
+      }
+
+      &::before {
+        color: $color-white !important;
+        font-size: $body-large;
+      }
+    }
+
+    .swiper-button-next {
+      right: 0;
+      left: unset;
+      color: white;
+    }
+
+    .swiper-button-prev {
+      right: 3.25em;
+      left: unset;
+      color: white;
+
+      @media (max-width: $tablet-large) {
+        margin-right: 1em;
+      }
+    }
+  }
+}

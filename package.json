@@ -1,0 +1,28 @@
+{
+  "name": "mdgbio",
+  "version": "1.0.0",
+  "description": "MDGBio Website",
+  "main": "index.php",
+  "scripts": {
+    "build": "npm run build --prefix ./wp-content/themes/mdgbio-divi-child",
+    "dev": "npm run dev --prefix ./wp-content/themes/mdgbio-divi-child",
+    "postinstall": "npm install ./wp-content/themes/mdgbio-divi-child",
+    "lint": "npm run lint --prefix ./wp-content/themes/mdgbio-divi-child",
+    "lint:fix": "npm run lint:fix --prefix ./wp-content/themes/mdgbio-divi-child"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TODO"
+  },
+  "author": "THIEL",
+  "license": "UNLICENSED",
+  "private": true,
+  "engineStrict": true,
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "dependencies": {
+    "mdgbio-divi-child": "file:wp-content/themes/mdgbio-divi-child"
+  }
+}

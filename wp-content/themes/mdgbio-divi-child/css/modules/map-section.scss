@@ -1,0 +1,23 @@
+.et_pb_section {
+  &.map {
+    padding: 0;
+
+    .et_pb_row {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: $tablet-large) {
+  .et_pb_section {
+    &.map {
+      .et_pb_row {
+        iframe {
+          height: 19.43em;
+        }
+      }
+    }
+  }
+}

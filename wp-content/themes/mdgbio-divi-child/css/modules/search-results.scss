@@ -1,0 +1,202 @@
+.et-db {
+  #et-boc {
+    .et-l {
+      .et_pb_section {
+        &.search-results-hero {
+          padding-bottom: 4em;
+          background-color: $color-primary;
+
+          .results-title {
+            padding-top: 10em;
+
+            .et_pb_text_inner {
+              font-size: $h4;
+              text-transform: uppercase;
+              color: $color-white;
+            }
+          }
+
+          .showing-results-title {
+            padding: 0;
+
+            .search-hero {
+              color: $color-white;
+              font-size: 3.125em;
+              text-transform: uppercase;
+              line-height: 1;
+
+              // stylelint-disable font-family-no-missing-generic-family-keyword
+              .et_pb_text_inner {
+                font-family: 'Magistral Light';
+              }
+              // stylelint-enable font-family-no-missing-generic-family-keyword
+            }
+          }
+        }
+
+        &.search-content {
+          padding-top: 0;
+
+          .et_pb_posts {
+            margin-top: 3.5em;
+
+            p:last-child::after {
+              content: '';
+              border: 0.5px solid #000;
+              transform: rotate(180deg);
+              display: block;
+              position: relative;
+              top: 1.5em;
+            }
+          }
+
+          .search-options {
+            background: $color-quaternary;
+            padding-top: 4em;
+
+            .et_pb_module {
+              padding: 0 2em;
+            }
+
+            .search-insights,
+            .trending-insights-title,
+            .recent-insights-title {
+              margin-bottom: 1.5em;
+
+              .et_pb_text_inner {
+                font-size: $h3;
+                color: $color-primary;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-family: $font-secondary;
+              }
+            }
+
+            .et_pb_search {
+              height: 10em;
+              border: none;
+              border-bottom: 0.125em solid $color-gray;
+              padding-bottom: 11em;
+
+              .et_pb_s {
+                border: 0.063em solid $color-primary;
+                border-radius: 0;
+                padding-left: 3em !important;
+                height: 3em !important;
+
+                &::placeholder {
+                  font-size: $body-largeish;
+                }
+              }
+
+              // stylelint-disable font-family-no-missing-generic-family-keyword
+              .et_pb_searchform {
+                &::before {
+                  content: '\55';
+                  font-family: ETModules;
+                  font-size: $body-largeish;
+                  color: $color-primary;
+                  position: absolute;
+                  top: 48%;
+                  left: 0.8em;
+                  transform: translateY(-50%) scaleX(-1);
+                  pointer-events: none;
+                  z-index: 10;
+                  font-weight: 800;
+                }
+                // stylelint-enable font-family-no-missing-generic-family-keyword
+
+                input.et_pb_searchsubmit {
+                  position: absolute;
+                  top: 4.5em;
+                  width: 100%;
+                  background: $color-primary;
+                  border: 0.125em solid $color-primary;
+                  color: $color-white;
+                  font-size: $body-largeish;
+                  transition: 0.3s all;
+
+                  &:hover {
+                    background: none;
+                    color: $color-primary;
+                  }
+                }
+              }
+            }
+
+            .trending-insights-results,
+            .recent-insights {
+              border-bottom: 0.125em solid #d9d9d9;
+
+              h2 {
+                font-size: 1rem;
+
+                a {
+                  font-weight: 300;
+                  color: $color-primary;
+                  font-family: $font-primary;
+                }
+              }
+
+              article {
+                margin-bottom: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-medium) {
+  .et-db {
+    #et-boc {
+      .et-l {
+        .et_pb_section {
+          &.search-results-hero {
+            .showing-results-title {
+              .search-hero {
+                font-size: $h3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-large) {
+  .et-db {
+    #et-boc {
+      .et-l {
+        .et_pb_section {
+          &.search-results-hero {
+            .showing-results-title {
+              .search-hero {
+                font-size: 1rem;
+
+                .et_pb_text_inner {
+                  font-size: $h3;
+                }
+              }
+            }
+          }
+
+          &.search-content {
+            .search-options {
+              .search-insights,
+              .trending-insights-title,
+              .recent-insights-title {
+                .et_pb_text_inner {
+                  font-size: $h4;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

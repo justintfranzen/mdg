@@ -1,0 +1,239 @@
+.et_pb_section {
+  &.markets {
+    background: $color-quaternary;
+    padding: 5em 0;
+
+    .et_pb_row {
+      &:first-child {
+        border-bottom: 0.052em solid $color-gray;
+      }
+
+      .market-blurb {
+        font-size: 1rem;
+
+        &.ready-to-get-started {
+          img {
+            width: 74%;
+          }
+
+          .et_pb_blurb_content {
+            background: $color-primary;
+
+            &:hover {
+              color: $color-white;
+            }
+
+            .et_pb_module_header {
+              color: $color-white;
+            }
+          }
+        }
+
+        &.wastewater:hover {
+          background: $color-primary;
+          border-radius: 0.313em;
+
+          .et_pb_blurb_content {
+            background-image: url('../assets/svg/wastewater.svg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 1em;
+            border-radius: 0.313em;
+            transition: none;
+
+            .et_pb_main_blurb_image {
+              z-index: -1;
+              position: relative;
+            }
+          }
+        }
+
+        &.fermentation:hover {
+          background: $color-primary;
+          border-radius: 0.313em;
+
+          .et_pb_blurb_content {
+            background-image: url('../assets/svg/fermentation.svg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 1em;
+            transition: none;
+
+            .et_pb_main_blurb_image {
+              z-index: -1;
+              position: relative;
+            }
+          }
+        }
+
+        &.industrial:hover {
+          background: $color-primary;
+          border-radius: 0.313em;
+
+          .et_pb_blurb_content {
+            background-image: url('../assets/svg/industrial.svg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 1em;
+            transition: none;
+
+            .et_pb_main_blurb_image {
+              z-index: -1;
+              position: relative;
+            }
+          }
+        }
+
+        &.bioremediation:hover {
+          background: $color-primary;
+          border-radius: 0.313em;
+
+          .et_pb_blurb_content {
+            background-image: url('../assets/svg/bioremediation.svg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 1em;
+            transition: none;
+
+            .et_pb_main_blurb_image {
+              z-index: -1;
+              position: relative;
+            }
+          }
+        }
+
+        &.landfill:hover {
+          background: $color-primary;
+          border-radius: 0.313em;
+
+          .et_pb_blurb_content {
+            background-image: url('../assets/svg/landfill.svg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 1em;
+            transition: none;
+
+            .et_pb_main_blurb_image {
+              z-index: -1;
+              position: relative;
+            }
+          }
+        }
+
+        &.plant-health:hover {
+          background: $color-primary;
+          border-radius: 0.313em;
+
+          .et_pb_blurb_content {
+            background-image: url('../assets/svg/plant-health.svg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 1em;
+            transition: none;
+
+            .et_pb_main_blurb_image {
+              z-index: -1;
+              position: relative;
+            }
+          }
+        }
+
+        &.aquaculture:hover {
+          background: $color-primary;
+          border-radius: 0.313em;
+
+          .et_pb_blurb_content {
+            background-image: url('../assets/svg/aquaculture.svg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 1em;
+            transition: none;
+
+            .et_pb_main_blurb_image {
+              z-index: -1;
+              position: relative;
+            }
+          }
+        }
+
+        .et_pb_blurb_content {
+          background: $color-white;
+          padding: 1em 0;
+          border: 0.052em solid $color-gray;
+          border-radius: 0.313em;
+
+          &::after {
+            content: '';
+            border: 0.052em solid $color-gray;
+            position: absolute;
+            right: -13%;
+            height: calc(100% - 2em);
+            top: 1em;
+          }
+
+          &:hover {
+            background: $color-primary;
+            cursor: pointer;
+
+            .et_pb_module_header {
+              color: $color-white;
+            }
+          }
+
+          .et_pb_main_blurb_image {
+            width: 10em;
+            max-width: 100%;
+            margin-bottom: 0;
+          }
+
+          .et_pb_module_header {
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-primary;
+            font-weight: 700;
+            font-size: $body-small;
+            margin: 0 auto;
+            line-height: 1.144em;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      .et_pb_column {
+        &:last-child {
+          .et_pb_blurb_content {
+            &:last-child {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-xlarge) {
+  .et_pb_section {
+    &.markets {
+      .et_pb_row {
+        .market-blurb {
+          .et_pb_blurb_content {
+            .et_pb_module_header {
+              font-size: $body-standard;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-large) {
+  .et_pb_section {
+    &.markets {
+      padding: 1em 0;
+    }
+  }
+}

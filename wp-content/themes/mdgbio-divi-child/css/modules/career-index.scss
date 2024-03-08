@@ -1,0 +1,25 @@
+.career-index-results {
+  display: block;
+  position: relative;
+
+  .career-index-result {
+    display: block;
+    position: relative;
+    margin-bottom: 2em;
+    padding-bottom: 3em;
+    border-bottom: 1px solid $color-gray;
+
+    .career-title {
+      color: $color-primary;
+      margin-bottom: 0.5em;
+    }
+
+    .career-summary {
+      margin-bottom: 1.5em;
+    }
+
+    .career-link {
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.et_pb_section {
+  &.faq {
+    font-size: 1rem;
+
+    .faq-header {
+      h3 {
+        font-size: $h3;
+        text-transform: uppercase;
+        color: $color-primary;
+        text-align: center;
+      }
+    }
+
+    .et_pb_toggle {
+      background: $color-quaternary;
+      border: 0.104em solid $color-gray;
+      padding: 3em 2em;
+      margin-bottom: 1em;
+
+      .et_pb_toggle_title {
+        color: $color-primary;
+        font-weight: 700;
+        font-size: $body-large;
+        text-transform: uppercase;
+
+        &::before {
+          background: $color-primary;
+          border-radius: 013em;
+          padding-left: 0.05em;
+          height: 1.25em;
+          width: 1.25em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 800 !important;
+          color: $color-white;
+        }
+      }
+    }
+
+    .accordion-content {
+      display: flex;
+      font-size: 1rem;
+      margin: 3em 0;
+
+      &:last-child {
+        p {
+          &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        margin-top: 2em !important;
+      }
+
+      .key-point {
+        width: calc(40% - 5em);
+        font-size: $body-standard;
+        font-weight: 600;
+        color: $color-primary;
+      }
+
+      .key-point-description {
+        font-size: $body-small;
+        font-weight: 400;
+        color: $color-secondary;
+        width: calc(80% - 15em);
+        border-bottom: 0.092em solid $color-gray;
+        padding-bottom: 4em;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-xlarge) {
+  .et_pb_section {
+    &.faq {
+      .faq-header {
+        h3 {
+          font-size: $h2;
+        }
+      }
+
+      .et_pb_toggle_title {
+        font-size: $h3 !important;
+      }
+
+      .accordion-content {
+        .key-point {
+          font-size: $h4;
+        }
+
+        .key-point-description {
+          font-size: $body-standard;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-large) {
+  .et_pb_section {
+    &.faq {
+      .faq-header {
+        h3 {
+          font-size: $h4;
+        }
+      }
+
+      .et_pb_toggle {
+        padding: 1.5em 0.5em;
+
+        .et_pb_toggle_title {
+          font-size: $body-standard;
+        }
+
+        .accordion-content {
+          flex-direction: column;
+          margin: 0 0 2em !important;
+
+          &:last-child {
+            margin: 0 !important;
+          }
+
+          .key-point {
+            width: 100%;
+          }
+
+          .key-point-description {
+            font-size: $body-standard;
+            padding-bottom: 2em;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

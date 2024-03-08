@@ -1,0 +1,40 @@
+.et_pb_section {
+  &.hero-404 {
+    padding: 15em 0 6em;
+
+    .et_pb_row {
+      padding: 1em 0;
+
+      .error-404 {
+        .et_pb_text_inner {
+          color: $color-white;
+          text-transform: uppercase;
+        }
+      }
+
+      .page-not-found {
+        .et_pb_text_inner {
+          color: $color-white;
+          text-transform: uppercase;
+          font-size: $h3;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  &.search-content {
+    padding-top: 0;
+
+    .et_pb_row {
+      padding-top: 0;
+
+      .no-results-found-title {
+        color: $color-primary;
+        text-transform: uppercase;
+        font-size: $h4;
+        margin-top: 3.5em;
+      }
+    }
+  }
+}

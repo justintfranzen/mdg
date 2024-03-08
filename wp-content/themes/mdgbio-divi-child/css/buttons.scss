@@ -1,0 +1,53 @@
+.et_pb_button {
+  font-family: Magistral, Helvetica, Arial, Lucida, sans-serif;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: $body-standard;
+  text-transform: uppercase;
+  border-radius: 40px;
+  border: none !important;
+  padding: 0.5em 3em 0.5em 1.5em;
+
+  &::after {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    bottom: 0;
+    background-color: $color-white;
+    @include transform(translateY(-50%));
+
+    opacity: 1;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-awesome;
+    content: '\f061';
+    font-size: 1em;
+    color: $color-primary;
+    font-weight: 600;
+    height: 2em;
+    width: 2em;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &.reverse {
+    background-color: $color-white;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+
+    &::after {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.et_pb_section {
+  &.feed-clean-save {
+    padding: 5em 0;
+
+    .et_pb_module {
+      display: flex;
+      justify-content: center;
+
+      .et_pb_image_wrap {
+        text-align: center;
+      }
+
+      .et_pb_text_inner {
+        color: #fff;
+        text-align: center;
+        font-weight: 600;
+        font-size: $body-standard;
+        width: 56.25em;
+      }
+    }
+
+    .et_pb_button_module_wrapper {
+      display: flex;
+      justify-content: center;
+
+      .et_pb_button {
+        background: $color-white;
+        color: $color-primary;
+
+        &::after {
+          background: $color-primary;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-xlarge) {
+  .feed-clean-save {
+    .et_pb_module {
+      .et_pb_text_inner {
+        font-size: $h4;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-large) {
+  .feed-clean-save {
+    .et_pb_row {
+      .et_pb_image {
+        img {
+          width: calc(90% - 3em);
+        }
+      }
+
+      .et_pb_button_module_wrapper {
+        .et_pb_button {
+          font-size: $body-small;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-medium) {
+  .real-science-video {
+    padding: 0;
+    margin-bottom: -5em;
+    position: relative;
+    top: -3em;
+  }
+}

@@ -1,0 +1,250 @@
+.mission-card-carousel {
+  margin-top: 2em;
+  overflow: hidden;
+
+  .mission-control-mobile {
+    display: none;
+
+    .et_pb_column {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: $tablet-large) {
+      display: block;
+    }
+  }
+
+  &_header {
+    padding: 4em 0 2em !important;
+
+    @media (max-width: $tablet-large) {
+      padding-top: 3em !important;
+      padding-bottom: 0 !important;
+
+      .et_pb_column {
+        margin-bottom: 0;
+      }
+    }
+
+    &::before {
+      height: 6px;
+
+      --border-width: 8px;
+      --stripe-distance: 2px;
+
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      top: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        $color-gray,
+        transparent 1px,
+        transparent var(--stripe-distance),
+        $color-gray calc(var(--stripe-distance) + 1px)
+      );
+    }
+
+    h2 {
+      color: $color-primary;
+      font-size: $h2;
+      text-transform: uppercase;
+
+      @media (max-width: $tablet-large) {
+        text-align: center;
+        font-size: $h3;
+      }
+    }
+
+    .mission-card-carousel_controls {
+      display: flex;
+      justify-content: flex-end;
+
+      @media (max-width: $tablet-large) {
+        display: none;
+      }
+
+      .et_pb_code_inner {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .slider-fraction {
+        font-family: $font-primary;
+        color: $color-secondary;
+        font-size: $h4;
+        margin-right: 1em;
+      }
+    }
+  }
+
+  .dsm_card_carousel_wrapper {
+    overflow: visible;
+  }
+
+  .dsm_card_carousel {
+    > .et_pb_module_inner {
+      width: 70% !important;
+
+      @media (max-width: $tablet-large) {
+        width: 90% !important;
+      }
+    }
+  }
+
+  .mission-card-carousel_custom-arrows {
+    button {
+      border: 3px solid $color-septenary;
+      border-radius: 100%;
+      width: 3.5em;
+      height: 3.5em;
+      background: white;
+      font-family: $font-awesome;
+
+      @media (max-width: $tablet-large) {
+        &:first-of-type {
+          margin-right: 1em;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &#mission-card-carousel_custom-arrows-prev,
+      &#mission-card-carousel_custom-arrows-next,
+      &#mission-card-carousel_custom-arrows-prev-mobile,
+      &#mission-card-carousel_custom-arrows-next-mobile {
+        i {
+          font-size: 1.5em;
+          color: $color-primary;
+          font-weight: 600;
+        }
+
+        &:hover {
+          background-color: $color-septenary;
+        }
+      }
+    }
+  }
+
+  &_slider {
+    padding: 0;
+
+    @media (max-width: $tablet-large) {
+      .swiper-container {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none !important;
+    }
+
+    .dsm_card_carousel_child {
+      height: 30em !important;
+      margin-right: 30px !important;
+
+      @media (max-width: $tablet-large) {
+        height: 18em !important;
+      }
+
+      .et_pb_module_inner,
+      figure {
+        height: 100%;
+      }
+
+      .dsm_card_wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($color-primary, 0.9);
+        color: $color-white;
+        padding: 1.75em 20% 1.75em 3em;
+
+        .dsm_card_carousel_child_description {
+          @media (max-width: $tablet-large) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          &::after {
+            background-color: $color-quaternary;
+            color: $color-primary;
+          }
+        }
+
+        @media (min-width: $tablet-x-large) {
+          &::before {
+            content: '';
+            background-color: $color-quaternary;
+            width: 30%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            clip-path: polygon(100% -100%, 100% 100%, 100% 100%, 0% 100%);
+          }
+
+          &::after {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            bottom: 0;
+            background-color: $color-primary;
+            @include transform(translateY(-50%));
+
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $font-awesome;
+            content: '\f061';
+            font-size: 1.5em;
+            color: $color-white;
+            font-weight: 600;
+            width: 3.6rem;
+            padding-top: 0.1em;
+            border: 3px solid $color-primary;
+          }
+        }
+
+        .dsm_card_title {
+          color: $color-white;
+          font-size: $body-large;
+
+          @media (max-width: $tablet-large) {
+            font-size: $h4;
+            padding-bottom: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-large) {
+  .mission-card-carousel {
+    margin-top: 0;
+
+    .mission-control-mobile {
+      padding: 0;
+      margin-top: -2em;
+    }
+  }
+
+  .mission-card-carousel_slider {
+    .dsm_card_carousel_child {
+      margin-right: 0.94em !important;
+    }
+  }
+}
